@@ -9,7 +9,7 @@ import com.example.news_compose_c40.model.source.Source
 import com.example.news_compose_c40.model.source.SourcesResponse
 import com.example.news_compose_c40.util.UIMessage
 import com.example.news_compose_c40.util.fromJson
-import com.route.newsappc40gsat.api.NewsService
+import com.example.news_compose_c40.api.NewsService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

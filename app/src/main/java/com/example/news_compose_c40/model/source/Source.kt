@@ -17,7 +17,7 @@ data class Source(
 	val language: String? = null,
 
 	@field:SerializedName("id")
-	val id: String,
+	val id: String?=null,
 
 	@field:SerializedName("category")
 	val category: String? = null,

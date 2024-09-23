@@ -6,29 +6,26 @@ import com.google.gson.annotations.SerializedName
 data class Article(
 
 	@field:SerializedName("publishedAt")
-	var publishedAt: String? = null,
+	val publishedAt: String? = null,
 
 	@field:SerializedName("author")
-	var author: String? = null,
+	val author: String? = null,
 
 	@field:SerializedName("urlToImage")
-	var urlToImage: String? = null,
+	val urlToImage: String? = null,
 
 	@field:SerializedName("description")
-	var description: String? = null,
+	val description: String? = null,
 
 	@field:SerializedName("source")
-	var source: Source? = null,
-
-	var sourceId: String? = null,
-
+	val source: Source? = null,
 
 	@field:SerializedName("title")
-	var title: String?=null,
+	val title: String?=null,
 
 	@field:SerializedName("url")
-	var url: String? = null,
+	val url: String? = null,
 
 	@field:SerializedName("content")
-	var content: String? = null,
+	val content: String? = null,
 )

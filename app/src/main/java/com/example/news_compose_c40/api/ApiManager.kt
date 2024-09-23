@@ -1,23 +1,18 @@
 package com.example.news_compose_c40.api
 
-import android.content.Context
 import android.util.Log
 import com.example.news_compose_c40.BuildConfig
-import com.example.news_compose_c40.R
 import com.example.news_compose_c40.api.interceptors.NewsAppAPIKeyString
-import com.route.newsappc40gsat.api.NewsService
-import com.route.newsappc40gsat.api.interceptors.AuthAPIKeyInterceptor
+import com.example.news_compose_c40.api.interceptors.AuthAPIKeyInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.Properties
 import javax.inject.Singleton
 
 @Module

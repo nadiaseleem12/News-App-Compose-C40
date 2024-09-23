@@ -20,6 +20,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.news_compose_c40.R
 import com.example.news_compose_c40.screens.news_details.NewsDetailsViewModel
+import com.example.news_compose_c40.util.getErrorMessage
 import com.example.news_compose_c40.widgets.ErrorDialog
 import com.example.news_compose_c40.widgets.NewsList
 import com.example.news_compose_c40.widgets.NewsTopAppBar
@@ -76,7 +77,7 @@ fun NewsScreen(
         // Call `getNewsBySource` for the first source once sources are fetched
         LaunchedEffect(key1 = vm.sourcesList) {
             if (!vm.sourcesList.isNullOrEmpty()) {
-                vm.getNewsBySource(vm.sourcesList!![0].id)
+                vm.sourcesList!![0].id?.let { vm.getNewsBySource(it) }
             }
         }
 
@@ -112,9 +113,6 @@ fun NewsScreen(
         }
     }
 }
-@Composable
-fun getErrorMessage(errorMessage: String?, errorMessageId: Int?) = errorMessage ?: errorMessageId?.let { stringResource(id = it) } ?: stringResource(id = R.string.something_went_wrong)
-
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable

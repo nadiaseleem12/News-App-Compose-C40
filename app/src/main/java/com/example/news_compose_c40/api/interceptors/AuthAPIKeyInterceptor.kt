@@ -1,4 +1,4 @@
-package com.route.newsappc40gsat.api.interceptors
+package com.example.news_compose_c40.api.interceptors
 
 import okhttp3.Interceptor
 import okhttp3.Response

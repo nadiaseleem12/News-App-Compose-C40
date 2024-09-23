@@ -7,10 +7,9 @@ import androidx.lifecycle.viewModelScope
 import com.example.news_compose_c40.R
 import com.example.news_compose_c40.model.article.Article
 import com.example.news_compose_c40.model.article.ArticlesResponse
-import com.example.news_compose_c40.model.source.SourcesResponse
 import com.example.news_compose_c40.util.UIMessage
 import com.example.news_compose_c40.util.fromJson
-import com.route.newsappc40gsat.api.NewsService
+import com.example.news_compose_c40.api.NewsService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,7 +18,7 @@ import java.net.UnknownHostException
 import javax.inject.Inject
 
 @HiltViewModel
-class NewsDetailsViewModel @Inject constructor(val newsService: NewsService,savedStateHandle: SavedStateHandle):ViewModel() {
+class NewsDetailsViewModel @Inject constructor(val newsService: NewsService, savedStateHandle: SavedStateHandle):ViewModel() {
 
     private val title:String? = savedStateHandle["title"]
 
