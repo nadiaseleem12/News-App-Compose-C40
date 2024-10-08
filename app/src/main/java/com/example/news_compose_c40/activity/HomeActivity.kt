@@ -3,9 +3,9 @@ package com.example.news_compose_c40.activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ModalNavigationDrawer
@@ -36,7 +36,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class HomeActivity : ComponentActivity() {
+class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         actionBar?.hide()
         installSplashScreen()
@@ -141,8 +141,7 @@ fun NewsAppNavigation(
         }
 
         composable<SettingsRoute>{
-            SettingsScreen()
-        }
+            SettingsScreen(scope = scope, drawerState = drawerState)        }
     }
 
 

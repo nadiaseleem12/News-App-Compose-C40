@@ -17,3 +17,5 @@ val green = Color(0xFF39A552)
 val textColor=Color(0xFF4F5A69)
 val transparent = Color(0)
 val darkGray=Color(0xFF303030)
+
+val green_50=Color(0xFF39A552)
